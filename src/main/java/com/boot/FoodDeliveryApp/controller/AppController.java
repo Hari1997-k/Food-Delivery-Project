@@ -25,11 +25,13 @@ public class AppController {
 
 	@RequestMapping("/viewmenu")
 	public String viewMenu() {
+		System.out.println("Menu Called");
 		return "Access The Food Menu ";
 	}
 
 	@RequestMapping("/addfood/{id}{fooditem}")
 	public String AddFood_To_User(@PathVariable("id") Integer uid, @PathVariable("fooditem") String UserFood) {
+		System.out.println("Menu Called");
 		uservice.Save_User_SelectedFood(UserFood, uid);
 		return " Food Added ";
 
