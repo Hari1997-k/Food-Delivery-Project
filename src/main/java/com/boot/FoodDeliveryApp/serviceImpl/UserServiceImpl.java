@@ -23,7 +23,6 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	@Query(value = "update User set foodItem =?1 where uid =?2")
 	public void Update_UserFood(String New_FoodItem, Integer uid) {
 		udao.Update_UserFood(New_FoodItem, uid);
 
@@ -36,7 +35,6 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	@Query(value = "update User set foodItem = null where uid =?1")
 	public void Delete_UserFood(Integer uid) {
 		udao.Delete_UserFood(uid);
 
